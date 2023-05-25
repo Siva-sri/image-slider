@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: wheat;
+}
+
+.slider-container{
+    position: relative; /*Parent for btn*/
+    width: 500px;
+    height: 300px;
+    overflow: hidden; /*Hides remaining images by removing them out of container*/
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.image-container{
+    display: flex; /*Bring all image at the same line*/
+    transition: transform 0.4s ease-in-out;
+}
+
+.btn{
+    position: absolute; /*Relative absolute to parent*/
+    top: 50%;
+    transform: translateY(-50%); /*To bring the middle of icon to center*/
+    color: white;
+    font-size: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.btn.prev{
+    left: 10px;
+}
+
+.btn.next{
+    right: 10px;
+}
+
+.btn:hover{
+    opacity: 1;
+}
